@@ -32,3 +32,24 @@ Route::get('/post/{id}', function ($id) {
 Route::get('/search', function (Request $request) {
     dd($request);
 });
+
+
+Route::get('/', function () {
+    return view('listings', [
+        'heading' => 'listings heading',
+        'details' => [
+            [
+                'id' => 1,
+                'name' => 'This is sample article 1',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas blandit lobortis. Ut sed posuere lectus. Donec consequat felis ex, et sagittis nisl congue a. Donec ipsum risus, dictum in justo sit amet, vulputate pharetra ante. Pellentesque et leo a sapien accumsan iaculis. Fusce malesuada eros arcu, fermentum imperdiet ipsum bibendum vel. Nam porttitor dignissim arcu id commodo. Nulla at ex aliquet, sodales erat nec, aliquet erat. Curabitur sodales ultrices convallis.'
+            ],
+            [
+                'id' => 2,
+                'name' => 'This is sample article 2',
+                'description' => 'Lorem ipsum dolor sit amet,
+                 consectetur adipiscing elit. Donec egestas blandit lobortis.
+                  Ut sed posuere lectus. Donec consequat felis ex, et sagittis nisl congue a. Donec ipsum risus, dictum in justo sit amet, vulputate pharetra ante. Pellentesque et leo a sapien accumsan iaculis. Fusce malesuada eros arcu, fermentum imperdiet ipsum bibendum vel. Nam porttitor dignissim arcu id commodo. Nulla at ex aliquet, sodales erat nec, aliquet erat. Curabitur sodales ultrices convallis.'
+            ],
+        ]
+    ]);
+});
